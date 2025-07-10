@@ -1,0 +1,17 @@
+unique_name: call_center_model
+object_type: model
+label: Call Center Model
+
+relationships:
+  - unique_name: fact_to_call_center
+    from:
+      dataset: fact_sales_dataset      # Assumed fact dataset
+      join_columns:
+        - call_center_sk             # Assumed join key in the fact dataset
+    to:
+      dimension: call_center_dimension
+      level: call_center_level
+
+metrics:
+  - unique_name: total_employees_metric
+    folder: Call Center Metrics
