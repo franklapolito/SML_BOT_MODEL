@@ -1,0 +1,46 @@
+unique_name: call_center_dataset
+object_type: dataset
+label: Call Center Dataset
+connection_id: wh
+table: call_center 
+columns:
+  - name: cc_call_center_sk
+    data_type: int
+  - name: cc_call_center_id
+    data_type: string
+  - name: cc_rec_start_date
+    data_type: date
+  - name: cc_rec_end_date
+    data_type: date
+  - name: cc_closed_date_sk
+    data_type: int
+  - name: cc_open_date_sk
+    data_type: int
+  - name: cc_name
+    data_type: string
+  - name: cc_class
+    data_type: string
+  - name: cc_employees
+    data_type: int
+  - name: cc_sq_ft
+    data_type: int
+  - name: cc_hours
+    data_type: string
+  - name: cc_manager
+    data_type: string
+  - name: cc_mkt_id
+    data_type: int
+  - name: cc_mkt_class
+    data_type: string
+  - name: cc_mkt_desc
+    data_type: string
+  - name: cc_market_manager
+    data_type: string
+  - name: cc_division
+    data_type: int
+  - name: cc_division_name
+    data_type: string
+  - name: cc_company
+    data_type: int
+  - name: cc_company_name
+    data_type: string
