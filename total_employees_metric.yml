@@ -1,0 +1,6 @@
+unique_name: total_employees_metric
+object_type: metric
+label: Total Employees
+calculation_method: sum
+dataset: call_center_dataset
+column: cc_employees
