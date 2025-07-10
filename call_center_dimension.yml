@@ -1,0 +1,61 @@
+unique_name: call_center_dimension
+object_type: dimension
+label: Call Center Dimension
+type: standard
+
+hierarchies:
+  - unique_name: call_center_hierarchy
+    label: Call Center Hierarchy
+    levels:
+      - unique_name: company_level
+      - unique_name: division_level
+      - unique_name: call_center_level
+
+level_attributes:
+  - unique_name: company_level
+    label: Company
+    dataset: call_center_dataset
+    name_column: cc_company_name
+    key_columns:
+      - cc_company
+
+  - unique_name: division_level
+    label: Division
+    dataset: call_center_dataset
+    name_column: cc_division_name
+    key_columns:
+      - cc_company
+      - cc_division
+
+  - unique_name: call_center_level
+    label: Call Center
+    is_unique_key: true
+    dataset: call_center_dataset
+    name_column: cc_name
+    key_columns:
+      - cc_call_center_sk
+    secondary_attributes:
+      - unique_name: call_center_id
+        label: Call Center ID
+        dataset: call_center_dataset
+        name_column: cc_call_center_id
+        key_columns:
+          - cc_call_center_id
+      - unique_name: call_center_manager
+        label: Call Center Manager
+        dataset: call_center_dataset
+        name_column: cc_manager
+        key_columns:
+          - cc_manager
+      - unique_name: call_center_employees
+        label: Number of Employees
+        dataset: call_center_dataset
+        name_column: cc_employees
+        key_columns:
+          - cc_employees
+      - unique_name: call_center_sq_ft
+        label: Square Feet
+        dataset: call_center_dataset
+        name_column: cc_sq_ft
+        key_columns:
+          - cc_sq_ft
