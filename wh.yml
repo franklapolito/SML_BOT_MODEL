@@ -1,0 +1,6 @@
+unique_name: wh
+object_type: connection
+label: wh
+as_connection: Databricks
+database: tpcds_10t
+schema: tpcds_10t
